@@ -4,6 +4,7 @@ using System.Linq;
 
 class Program
 {
+    // Lista para armazenar os usuários cadastrados
     static List<Usuario> usuarios = new List<Usuario>();
 
     static void Main()
@@ -12,11 +13,12 @@ class Program
 
         do
         {
-            Console.Clear(); 
-            ExibirMenu();
+            Console.Clear(); // Limpa a tela a cada iteração do menu
+            ExibirMenu();  // Exibe as opções do menu
 
-            opcao = Console.ReadLine();
+            opcao = Console.ReadLine(); // Lê a escolha do usuário
 
+            // Estrutura de decisão para chamar a funcionalidade escolhida
             switch (opcao)
             {
                 case "1":
@@ -29,21 +31,24 @@ class Program
                     BuscarUsuario();
                     break;
                 case "0":
+                    // Mensagem ao sair do programa
                     Console.ForegroundColor = ConsoleColor.Yellow;
                     Console.WriteLine("\nSaindo...\n");
                     Console.ResetColor();
                     break;
                 default:
+                    // Mensagem para opção inválida
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("\nOpção inválida!");
                     Console.ResetColor();
-                    AguardarEnter();
+                    AguardarEnter(); // Aguarda o usuário pressionar Enter antes de voltar ao menu
                     break;
             }
 
-        } while (opcao != "0");
+        } while (opcao != "0"); // Continua no loop até o usuário escolher "0" (Sair)
     }
 
+    // Exibe o menu de opções
     static void ExibirMenu()
     {
         Console.ForegroundColor = ConsoleColor.Cyan;
@@ -59,6 +64,7 @@ class Program
         Console.Write("> Escolha uma opção: ");
     }
 
+    // Método para cadastrar um novo usuário
     static void CadastrarUsuario()
     {
         Console.Clear();
@@ -66,15 +72,18 @@ class Program
         Console.WriteLine("===== CADASTRO DE USUÁRIO =====");
         Console.ResetColor();
 
+        // Solicita o nome do usuário
         Console.Write("\n> Nome: ");
         string nome = Console.ReadLine();
 
+        // Solicita o e-mail do usuário
         Console.Write("\n> E-mail: ");
         string email = Console.ReadLine();
 
         int idade;
         bool idadeValida;
         
+        // Loop para garantir que o usuário digite uma idade válida
         do
         {
             Console.Write("\n> Idade: ");
@@ -87,15 +96,17 @@ class Program
                 Console.ResetColor();
             }
 
-        } while (!idadeValida);
+        } while (!idadeValida); // Continua pedindo até o usuário digitar um número válido
 
+        // Adiciona o novo usuário à lista
         usuarios.Add(new Usuario(nome, email, idade));
         Console.ForegroundColor = ConsoleColor.Green;
         Console.WriteLine("\nUsuário cadastrado com sucesso!");
         Console.ResetColor();
-        AguardarEnter();
+        AguardarEnter(); // Aguarda Enter antes de voltar ao menu
     }
 
+    // Lista os usuários cadastrados
     static void ListarUsuarios()
     {
         Console.Clear();
@@ -103,6 +114,7 @@ class Program
         Console.WriteLine("===== LISTA DE USUÁRIOS =====");
         Console.ResetColor();
 
+        // Verifica se a lista de usuários está vazia
         if (usuarios.Count == 0)
         {
             Console.ForegroundColor = ConsoleColor.Red;
@@ -111,14 +123,16 @@ class Program
         }
         else
         {
+            // Exibe todos os usuários cadastrados
             foreach (var usuario in usuarios)
             {
                 Console.WriteLine(usuario);
             }
         }
-        AguardarEnter();
+        AguardarEnter(); // Aguarda Enter antes de voltar ao menu
     }
 
+    // Busca um usuário pelo nome
     static void BuscarUsuario()
     {
         Console.Clear();
@@ -126,9 +140,11 @@ class Program
         Console.WriteLine("===== BUSCAR USUÁRIO =====");
         Console.ResetColor();
 
+        // Solicita o nome para a busca
         Console.Write("\nDigite o nome do usuário para busca: ");
         string nome = Console.ReadLine();
 
+        // Procura um usuário com o nome fornecido (sem considerar maiúsculas/minúsculas)
         var usuario = usuarios.FirstOrDefault(u => u.Nome.Equals(nome, StringComparison.OrdinalIgnoreCase));
 
         if (usuario != null)
@@ -144,9 +160,10 @@ class Program
             Console.WriteLine("\nUsuário não encontrado.");
             Console.ResetColor();
         }
-        AguardarEnter();
+        AguardarEnter(); // Aguarda Enter antes de voltar ao menu
     }
 
+    // Método auxiliar para aguardar Enter antes de continuar
     static void AguardarEnter()
     {
         Console.ForegroundColor = ConsoleColor.DarkGray;

@@ -1,0 +1,15 @@
+C:\Users\sammy\Downloads\AutoMindApp\bin\Debug\net10.0\AutoMindApp.exe
+C:\Users\sammy\Downloads\AutoMindApp\bin\Debug\net10.0\AutoMindApp.deps.json
+C:\Users\sammy\Downloads\AutoMindApp\bin\Debug\net10.0\AutoMindApp.runtimeconfig.json
+C:\Users\sammy\Downloads\AutoMindApp\bin\Debug\net10.0\AutoMindApp.dll
+C:\Users\sammy\Downloads\AutoMindApp\bin\Debug\net10.0\AutoMindApp.pdb
+C:\Users\sammy\Downloads\AutoMindApp\obj\Debug\net10.0\AutoMindApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sammy\Downloads\AutoMindApp\obj\Debug\net10.0\AutoMindApp.AssemblyInfoInputs.cache
+C:\Users\sammy\Downloads\AutoMindApp\obj\Debug\net10.0\AutoMindApp.AssemblyInfo.cs
+C:\Users\sammy\Downloads\AutoMindApp\obj\Debug\net10.0\AutoMindApp.csproj.CoreCompileInputs.cache
+C:\Users\sammy\Downloads\AutoMindApp\obj\Debug\net10.0\AutoMindApp.sourcelink.json
+C:\Users\sammy\Downloads\AutoMindApp\obj\Debug\net10.0\AutoMindApp.dll
+C:\Users\sammy\Downloads\AutoMindApp\obj\Debug\net10.0\refint\AutoMindApp.dll
+C:\Users\sammy\Downloads\AutoMindApp\obj\Debug\net10.0\AutoMindApp.pdb
+C:\Users\sammy\Downloads\AutoMindApp\obj\Debug\net10.0\AutoMindApp.genruntimeconfig.cache
+C:\Users\sammy\Downloads\AutoMindApp\obj\Debug\net10.0\ref\AutoMindApp.dll
